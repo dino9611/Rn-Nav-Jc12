@@ -1,8 +1,9 @@
 import React from 'react';
-// import Center from './../component/Center';
+import Center from './../component/Center';
 import { 
     Text,
-    Button 
+    Button,
+    View 
 } from 'react-native';
 
 

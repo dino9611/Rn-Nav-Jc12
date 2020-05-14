@@ -1,12 +1,12 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import Center from './../component/Center';
 import { 
     Text,
     Button 
 } from 'react-native';
-
+import {Authcontext} from './../context/Authcontext'
 const Login=({navigation})=>{
-    // const {signinout} =useContext(Authcontext)
+    const {signinout} =useContext(Authcontext)
   
     return(
     <Center>
@@ -15,7 +15,7 @@ const Login=({navigation})=>{
         </Text>
         <Button
           title='masuk'
-          // onPress={()=>signinout()}
+          onPress={()=>signinout()}
         />
         <Button 
           title='register to jc11'
