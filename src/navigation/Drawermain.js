@@ -16,7 +16,7 @@ export default function MyDrawer() {
         screenOptions={({route})=>({
           drawerIcon:({focused,color,size})=>{
               let iconName;
-              console.log(route.name)
+              // console.log(route.name)
               if (route.name === 'TabHome') {
                   iconName = focused
                       ? 'account-box'
@@ -57,8 +57,10 @@ export default function MyDrawer() {
           // }
         }}
       >
-        <Drawer.Screen name="TabHome" component={TabNav}  />
-        <Drawer.Screen name="Search" component={Search} />
+        <Drawer.Screen name="TabHome" component={TabNav} options={{
+          swipeEnabled:false
+        }}  />
+        <Drawer.Screen name="Search" component={Search}  />
       </Drawer.Navigator>
     );
   }

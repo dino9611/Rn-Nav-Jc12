@@ -2,7 +2,8 @@ import React,{useContext} from 'react';
 import Center from './../component/Center';
 import { 
     Text,
-    Button 
+    Button,
+    AsyncStorage 
 } from 'react-native';
 import {Authcontext} from './../context/Authcontext'
 const Login=({navigation})=>{
@@ -15,7 +16,12 @@ const Login=({navigation})=>{
         </Text>
         <Button
           title='masuk'
-          onPress={()=>signinout()}
+          onPress={()=>{
+            AsyncStorage.setItem('login','iya')
+            .then(()=>{
+              signinout()
+            })
+          }}
         />
         <Button 
           title='register to jc11'
